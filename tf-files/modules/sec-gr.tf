@@ -21,7 +21,7 @@ resource "aws_security_group" "alb-sg" {
 
 
 
-resource "aws_security_group" "server-sg" {
+resource "aws_security_group" "server-sg2" {
   name = "WebServerSecurityGroup"
   vpc_id = data.aws_vpc.selected.id
   tags = {
@@ -60,7 +60,7 @@ resource "aws_security_group" "db-sg" {
     "Name" = "TF_RDSSecurityGroup"
   }
   ingress {
-    security_groups = [aws_security_group.server-sg.id]
+    security_groups = [aws_security_group.server-sg2.id]
     from_port = 3306
     protocol = "tcp"
     to_port = 3306
