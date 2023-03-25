@@ -1,7 +1,7 @@
 module "phonebook" {
   source = "../modules"
   git-name = "bekirokutan"
-  git-token ="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"
+  git-token ="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"
   key-name = "first-key"
   hosted-zone = "bekirokutan.com"
   database-name= "phonebook"
