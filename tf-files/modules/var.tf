@@ -5,4 +5,5 @@ variable "hosted-zone" {}
 variable "database-user" {}
 variable "database-name" {}
 variable "database-pass" {}
+variable "subdomain_name" {}
 

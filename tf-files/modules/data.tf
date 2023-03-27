@@ -9,6 +9,13 @@ data "aws_subnets" "pb-subnets" {
   }
 }
 
+data "aws_acm_certificate" "cert" {
+  domain   = var.hosted-zone
+  statuses = ["ISSUED"]
+}
+  
+
+
 data "aws_ami" "amazon-linux-2" {
   owners = ["amazon"]
   most_recent = true
